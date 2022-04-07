@@ -1,2 +1,4 @@
-import DemoViewer from "./DemoViewer"
+import DemoViewer from "./DemoViewer";
+
+export {IDemoViewerProps} from "./DemoViewer";
 export default DemoViewer;

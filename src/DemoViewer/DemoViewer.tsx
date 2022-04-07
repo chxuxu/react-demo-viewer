@@ -4,7 +4,7 @@ import * as RDOM from 'react-dom';
 import CompRender from "./CompRender";
 import { marked } from 'marked';
 import "./style/index.less";
-export interface IAppProps {
+export interface IDemoViewerProps {
   component: any;//当前用于渲染示例代码的组件
   dependencies?: any;//依赖其他组件列表的MAP集合，{key：value}
   docSrc?: string;//文档内容，约定为markdown文档。
@@ -36,7 +36,7 @@ function useRender(_marked) {
   return _marked;
 }
 const deme_components = [];
-export default function App(props: IAppProps) {
+export default function DemoViewer(props: IDemoViewerProps) {
   const [html, setHtml] = useState("");
   useEffect(() => {
     if (props.docSrc) {
